@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* .video-container {
     position: relative;
     width: 100%;
@@ -76,3 +77,51 @@ html, body {
   max-height: 300px;
   object-fit: cover;
 }
+=======
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.background-video-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video-wrapper video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.overlay-content {
+  position: relative;
+  z-index: 1;
+  color:white;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+/* Bottom image section */
+.bottom-image {
+  z-index: 2;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.bottom-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+>>>>>>> 50e10fd44b566928a0d59036e21b96e8a0f33254
