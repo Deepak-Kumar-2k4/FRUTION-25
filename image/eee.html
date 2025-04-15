@@ -11,8 +11,8 @@
     <div class="top">
         <h1 class="font">Department of EEE</h1>
     </div>
-    <section class="image-container">
-        <div class="download-image fade-in">
+    <section class="image-container" id="imageContainer">
+        <!-- <div class="download-image fade-in">
             <img id="image" src="eee/eee (1).JPG" alt="">
             <br>
             <a id="download-button" href="eee/eee (1).JPG" download="eee/eee (1).JPG"><button>DOWNLOAD</button></a>
@@ -232,8 +232,32 @@
             <img id="image" src="eee/eee (37).JPG" alt="">
             <br>
             <a id="download-button" href="eee/eee (37).JPG" download="eee/eee (37).JPG"><button>DOWNLOAD</button></a>
-        </div>
+        </div> -->
     </section>
+    <script>
+        const imageContainer = document.getElementById("imageContainer");
+        for (let i = 1; i <= 51; i++) {
+          const div = document.createElement("div");
+          div.className = "download-image fade-in";
+    
+          const img = document.createElement("img");
+          img.src = `ece/ece (${i}).JPG`;
+          img.alt = `ECE Image ${i}`;
+    
+          const br = document.createElement("br");
+    
+          const a = document.createElement("a");
+          a.href = img.src;
+          a.download = img.src;
+    
+          const button = document.createElement("button");
+          button.textContent = "DOWNLOAD";
+    
+          a.appendChild(button);
+          div.append(img, br, a);
+          imageContainer.appendChild(div);
+        }
+      </script>
     <!-- <script src="../script.js"></script> -->
 </body>
 </html>
